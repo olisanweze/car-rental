@@ -1,0 +1,249 @@
+@import "./base.css";
+
+/*==============================*/
+/* page                         */
+/*==============================*/
+
+body {
+    background-color: #f4f3f6;
+}
+
+input {
+    height: 44px;
+    border-radius: 50px;
+    color: var(--app-white);
+    transition: all 0.25s ease-in-out;
+}
+
+main {
+    background-color: var(--app-white);
+}
+ 
+/*==============================*/
+/* header                       */
+/*==============================*/
+
+.hero-content {
+    display: flex;
+    place-items: center;
+    height: calc(100svh - 60px - 60px);
+}
+
+.landing-page {
+    background: hsl(0, 0%, 100%) url('../img/hero-banner-home.jpg') center 30%/ cover no-repeat;
+}
+
+.empty {
+    height: 60px;
+}
+
+header p {
+    font-size: 17px;
+    color: var(--app-white);
+    line-height: 60px;
+}
+
+.landing-page::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.4);
+    content: '';
+}
+
+.hero-content p:last-of-type {
+    padding-bottom: 30px;
+}
+
+/*==============================*/
+/* main                         */
+/*==============================*/
+
+.about-home-column {
+    flex: 0 0 calc(33.333333% - 20px);
+    max-width: calc(33.33333% - 20px);
+    width: 33.3333%;
+    box-shadow: 1px;
+    place-items: center;
+}
+
+.about-us-short, .best-offer-column-small p {
+    padding: 20px 0 30px;
+}
+
+.image-1 {
+    background: var(--app-white) url('../img/column-img-01.jpg') center / cover no-repeat;
+}
+
+.image-2 {
+    background: var(--app-white) url('../img/column-img-02.jpg') center / cover no-repeat;
+    width: 100%;
+    border-radius: var(--border-radius);
+    height: 250px;
+}
+
+.experience {
+    height: 120px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    background-color: rgb(94 47 13 / 0.8);
+}
+
+.experience p {
+    line-height: 120px;
+    color: rgb(255 255 255 / 0.85);
+    font-weight: 700;
+}
+
+.experience span {
+    font-size: 40px;
+    padding-right: 5px;
+}
+
+.best-offer {
+    background-color: rgb(131 131 131 / 0.025);
+}
+
+.best-offer-column-small {
+    place-items: center;
+    flex: 0 0 calc(30% - 15px);
+    max-width: calc(30% - 15px);
+}
+
+.best-offer-column-big {
+    flex: 0 0 calc(70% - 15px);
+    max-width: calc(70% - 15px);
+    height: 400px;
+    background: url('../img/deal-of-the-day.png') center / cover no-repeat;
+}
+
+.blog h2 {
+    padding-bottom: 40px;
+}
+
+.fleet-column {
+    flex: 0 0 calc(25% - 22.5px);
+    max-width: calc(25% - 22.5px);
+    box-shadow: 1px;
+}
+
+.fleet-1 {
+    background: url('../img/fleet-1.jpg') center / cover no-repeat;
+}
+
+.fleet-2 {
+    background: url('../img/fleet-2.jpg') center / cover no-repeat;
+}
+
+.fleet-3 {
+    background: url('../img/fleet-3.jpg') center / cover no-repeat;
+}
+
+.fleet-4 {
+    background: url('../img/fleet-4.jpg') center / cover no-repeat;
+}
+
+/*===============================*/
+/* media queries - desktop first */
+/*===============================*/
+
+/* 1200px and down */
+
+@media (max-width: 1200px) {
+    article, .blog {
+        padding: 60px 0;
+    }    
+}
+
+/* 1080px and down */
+
+@media (max-width: 1080px) {
+    article, .blog {
+        padding: 60px 0;
+    }
+
+    .experience-column {
+        display: none;
+    }
+
+    .about-home-column {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+/* 992px and down */
+
+@media (max-width: 992px) {
+    article, .blog {
+        padding: 60px 0;
+    } 
+
+    .experience-column {
+        display: none;
+    }
+
+    .about-home-column {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+/* 768px and down */
+
+@media (max-width: 768px) {
+    .landing-page {
+        background: hsl(0, 0%, 100%) url('../img/hero-banner-home-2.jpg') center 30%/ cover no-repeat;
+    }
+
+    article, .blog {
+        padding: 50px 0;
+    }
+
+    .blog h2 {
+        padding-bottom: 30px;
+    }
+    
+    .about-home-column, .fleet-column {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+
+    .best-offer-column-big, .best-offer-column-small {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .experience-column {
+        display: none;
+    }
+}
+
+/* 480px and down */
+
+@media (max-width: 480px) {
+    .landing-page {
+        background: hsl(0, 0%, 100%) url('../img/hero-banner-home-2.jpg') center 30%/ cover no-repeat;
+    }
+
+    .blog {
+        padding: 40px 0;
+    }
+    
+    .blog h2 {
+        padding-bottom: 25px;
+    }
+    
+    .about-home-column, .fleet-column, 
+    .best-offer-column-big, .best-offer-column-small {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .experience-column {
+        display: none;
+    }
+}
