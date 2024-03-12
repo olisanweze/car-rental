@@ -67,7 +67,7 @@ article, .blog, .contact-row {
     width: 180px;
     line-height: 44px;
     color: var(--app-white);
-    background-color: rgb(184 134 11 / 0.8);
+    background-color: rgb(184 134 11);
     text-align: center;
     font-weight: 700;
     cursor: pointer;
